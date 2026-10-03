@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Certo</title>
+<link rel="icon" href="icon.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<div class="preloader" aria-hidden="true">
+  <div class="pre-inner">
+    <div class="pre-logo">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M22.5 6.5A11 11 0 1 0 22.5 25.5" stroke="url(#plg2)" stroke-width="5.5" stroke-linecap="round"/>
+        <defs><linearGradient id="plg2" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+      </svg>
+      <span>Certo</span>
+    </div>
+    <div class="pre-bar"><span></span></div>
+    <p class="pre-text">Scan. Detect. Remove.</p>
+  </div>
+  <div class="pre-curtain c1"></div>
+  <div class="pre-curtain c2"></div>
+</div>
+
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M22.5 6.5A11 11 0 1 0 22.5 25.5" stroke="url(#lg2)" stroke-width="5.5" stroke-linecap="round"/>
+        <defs><linearGradient id="lg2" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+      </svg>
+      <span>Certo</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#home">
+        
+        Home
+      </a>
+      <a href="index.html#android">
+        
+        Android
+      </a>
+      <a href="index.html#help">
+        
+        Help
+      </a>
+      <a href="contact.html" class="active">
+        
+        Contact
+      </a>
+    </nav>
+    <button class="btn btn-signin" onclick="openAuth(this)">
+      
+      Sign in
+    </button>
+  </div>
+</header>
+
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-card">
+    <button class="auth-close" onclick="closeAuth(this)" aria-label="Close">✕</button>
+    <div class="auth-head">
+      <svg class="auth-logo" viewBox="0 0 32 32" fill="none">
+        <path d="M22.5 6.5A11 11 0 1 0 22.5 25.5" stroke="url(#alg2)" stroke-width="5.5" stroke-linecap="round"/>
+        <defs><linearGradient id="alg2" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+      </svg>
+      <h3 id="authTitle">Welcome back</h3>
+      <p id="authSub">Sign in to protect your mobile world</p>
+    </div>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchAuth(this,'login')">Sign in</button>
+      <button class="auth-tab" id="tabRegister" onclick="switchAuth(this,'register')">Register</button>
+      <span class="auth-tab-pill" id="authPill"></span>
+    </div>
+    <div class="auth-field reg-only" id="fieldName">
+      <label>Full name</label>
+      <input type="text" id="authName" placeholder="Abdulaziz Aliyev">
+    </div>
+    <div class="auth-field">
+      <label>Email address</label>
+      <input type="email" id="authEmail" placeholder="Aliyev@gmail.com">
+    </div>
+    <div class="auth-field">
+      <label>Password</label>
+      <input type="password" id="authPass" placeholder="••••••••">
+    </div>
+    <div class="auth-field reg-only" id="fieldPass2">
+      <label>Confirm password</label>
+      <input type="password" id="authPass2" placeholder="••••••••">
+    </div>
+    <button class="btn btn-primary auth-submit" id="authSubmit" onclick="submitAuth(this)">Sign in</button>
+    <p class="auth-note">🔒 Your data is encrypted end-to-end</p>
+  </div>
+</div>
+
+<section class="contact-hero">
+  <span class="c-badge reveal">💬 We're here to help</span>
+  <h1 class="reveal">Get in <span class="hl">touch</span> with us</h1>
+  <p class="reveal">Questions about spyware detection, your subscription, or anything else?<br>Our security experts reply within 24 hours.</p>
+</section>
+
+<section class="contact-body">
+  <div class="contact-wrap">
+
+    <div class="c-info reveal-left">
+      <div class="c-card">
+        <div class="c-ic ic-yellow"><svg viewBox="0 0 24 24"><path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z"></path><path d="M3.5 7l8.5 6 8.5-6"></path></svg></div>
+        <div><h3>Email us</h3><p>Support Aliyev@gmail.com</p></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ic ic-green"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg></div>
+        <div><h3>Call us</h3><p>+998954815774 · Mon–Fri, 9:00–18:00</p></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ic ic-purple"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.4-6.5-10a6.5 6.5 0 0 1 13 0c0 4.6-6.5 10-6.5 10z"></path><circle cx="12" cy="11" r="2.3"></circle></svg></div>
+        <div><h3>Visit us</h3><p>1 Security Square, Uzbekistan, Namangan Shahar</p></div>
+      </div>
+      <div class="c-card">
+        <div class="c-ic ic-blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></div>
+        <div><h3>Response time</h3><p>Average reply within 24 hours</p></div>
+      </div>
+    </div>
+
+    <div class="c-form-card reveal-right">
+      <h2>Send us a message</h2>
+      <p class="c-form-sub">Fill out the form below and we'll get back to you shortly.</p>
+      <div class="auth-field">
+        <label>Your name</label>
+        <input type="text" id="cName" placeholder="Abdulaziz Aliyev">
+      </div>
+      <div class="auth-field">
+        <label>Email address</label>
+        <input type="email" id="cEmail" placeholder="Aliyev@gmail.com">
+      </div>
+      <div class="auth-field">
+        <label>Message</label>
+        <textarea id="cMsg" rows="5" placeholder="How can we help you?"></textarea>
+      </div>
+      <button class="btn btn-primary c-send" onclick="handleContactSend(this)">
+        Send message
+        <svg viewBox="0 0 24 24"><path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4z"></path></svg>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="f-col f-brand">
+      <h3>Scan. Detect. Remove.</h3>
+      <div class="socials">
+        <button class="soc" onclick="handleSocial(this,'Twitter')" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M4 4l7.2 9.3L4.4 20h2.3l5.5-5.5L16.8 20H20l-7.5-9.7L19.3 4h-2.3l-4.9 5L8.2 4z"></path></svg></button>
+        <button class="soc" onclick="handleSocial(this,'Facebook')" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.5-1.3 1.4-1.3H17V2.5h-2.6C11.8 2.5 10.5 4.3 10.5 6.5v2H8V12h2.5v9.5H14V12h2.7l.4-3.5z"></path></svg></button>
+        <button class="soc" onclick="handleSocial(this,'YouTube')" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12.5" rx="3"></rect><path d="M10.2 9.6l5 2.65-5 2.65z" fill="currentColor" stroke="none"></path></svg></button>
+      </div>
+      <p class="copyright">Copyright © 2022 Certo Software Limited</p>
+    </div>
+    <div class="f-col f-nav">
+      <h4>Certo</h4>
+      <a href="index.html#iphone">— iPhone</a>
+      <a href="index.html#android">— Android</a>
+      <a href="index.html#help">— Help</a>
+      <a href="index.html#company">— About</a>
+      <a href="contact.html">— Contact</a>
+    </div>
+    <div class="f-col f-news">
+      <div class="news-card">
+        <h4>Sign up to our newsletter</h4>
+        <p>Receive the latest mobile security news straight to your inbox!</p>
+        <div class="news-form">
+          <input type="email" id="newsEmail" placeholder="Email address">
+          <button class="btn btn-news" onclick="handleSubscribe(this)">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="trademarks">Apple, the Apple logo, and iPhone are trademarks of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC.</p>
+</footer>
+
+<button class="to-top" onclick="handleToTop(this)" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+</button>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

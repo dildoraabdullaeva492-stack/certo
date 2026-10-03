@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certo — Your Mobile Privacy Is Our Mission</title>
+<link rel="icon" href="icon.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" aria-hidden="true">
+  <div class="pre-inner">
+    <div class="pre-logo">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M22.5 6.5A11 11 0 1 0 22.5 25.5" stroke="url(#plg)" stroke-width="5.5" stroke-linecap="round"/>
+        <defs><linearGradient id="plg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+      </svg>
+      <span>Certo</span>
+    </div>
+    <div class="pre-bar"><span></span></div>
+    <p class="pre-text">Scan. Detect. Remove.</p>
+  </div>
+  <div class="pre-curtain c1"></div>
+  <div class="pre-curtain c2"></div>
+</div>
+
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M22.5 6.5A11 11 0 1 0 22.5 25.5" stroke="url(#lg1)" stroke-width="5.5" stroke-linecap="round"/>
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+      </svg>
+      <span>Certo</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#iphone">
+        
+        Home
+      </a>
+      <a href="#android">
+        
+        Android
+      </a>
+      <a href="#help">
+        
+        Help
+      </a>
+      <a href="contact.html">
+        Contact
+      </a>
+    </nav>
+
+    <button class="btn btn-signin" onclick="openAuth(this)">
+      Sign in
+    </button>
+  </div>
+</header>
+
+<div class="auth-overlay" id="authOverlay">
+  <div class="auth-card">
+    <button class="auth-close" onclick="closeAuth(this)" aria-label="Close">✕</button>
+    <div class="auth-head">
+      <svg class="auth-logo" viewBox="0 0 32 32" fill="none">
+        <path d="M22.5 6.5A11 11 0 1 0 22.5 25.5" stroke="url(#alg)" stroke-width="5.5" stroke-linecap="round"/>
+        <defs><linearGradient id="alg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#FFB300"/><stop offset="1" stop-color="#FF7A00"/></linearGradient></defs>
+      </svg>
+      <h3 id="authTitle">Welcome back</h3>
+      <p id="authSub">Sign in to protect your mobile world</p>
+    </div>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" onclick="switchAuth(this,'login')">Sign in</button>
+      <button class="auth-tab" id="tabRegister" onclick="switchAuth(this,'register')">Register</button>
+      <span class="auth-tab-pill" id="authPill"></span>
+    </div>
+    <div class="auth-field reg-only" id="fieldName">
+      <label>Full name</label>
+      <input type="text" id="authName" placeholder="Abdulaziz Aliyev">
+    </div>
+    <div class="auth-field">
+      <label>Email address</label>
+      <input type="email" id="authEmail" placeholder="Aliyev@gmail.com">
+    </div>
+    <div class="auth-field">
+      <label>Password</label>
+      <input type="password" id="authPass" placeholder="••••••••">
+    </div>
+    <div class="auth-field reg-only" id="fieldPass2">
+      <label>Confirm password</label>
+      <input type="password" id="authPass2" placeholder="••••••••">
+    </div>
+    <button class="btn btn-primary auth-submit" id="authSubmit" onclick="submitAuth(this)">Sign in</button>
+    <p class="auth-note">🔒 Your data is encrypted end-to-end</p>
+  </div>
+</div>
+
+<section class="hero" id="iphone">
+  <div class="hero-inner">
+    <div class="hero-copy reveal-left">
+      <div class="hero-badge">
+        <span class="badge-stars">★★★★★</span> Rated Excellent by 10,000+ users
+      </div>
+      <h1>Your mobile <span class="hl">privacy</span><br>is our <span class="hl-alt">mission</span></h1>
+      <p>Think your phone has been hacked? Our trusted apps make it easy for you to scan, detect and remove threats from your iPhone and Android devices.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="handleGetApp(this,'iPhone')">
+          Get Certo for iPhone
+          <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+        </button>
+        <button class="btn btn-outline" onclick="handleGetApp(this,'Android')">
+          Get Certo for Android
+          <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>1M+</b><span>Downloads</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><b>4.8★</b><span>App rating</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><b>24/7</b><span>Protection</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal-right">
+      <div class="hero-photo">
+        <img src="jingalak.png" alt="Person securely using a smartphone">
+        <div class="hero-photo-ring"></div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone-glow"></div>
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="ps-head">
+              <span class="ps-menu">☰</span> Dashboard <span class="ps-badge">UPGRADE</span>
+            </div>
+            <div class="scan-ring">
+              <div class="scan-ring-inner">
+                <svg viewBox="0 0 24 24" class="scan-icon"><circle cx="11" cy="11" r="6.5"></circle><line x1="15.8" y1="15.8" x2="20.5" y2="20.5"></line></svg>
+                <span>Scan</span>
+              </div>
+              <div class="scan-sweep"></div>
+            </div>
+            <div class="ps-last">Last scan: 07:22 · No threats ✓</div>
+            <ul class="ps-list">
+              <li><span class="ps-ic">🛡</span> Privacy Audit <em>›</em></li>
+              <li><span class="ps-ic">⚙</span> System Adviser <em>›</em></li>
+              <li><span class="ps-ic">🔄</span> Auto Scan <em>›</em></li>
+              <li><span class="ps-ic">🚨</span> Intruder Detection <em>›</em></li>
+              <li><span class="ps-ic">🔐</span> Breach Check <em>›</em></li>
+            </ul>
+          </div>
+        </div>
+        <div class="float-chip chip-1"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6z"></path></svg> Protected</div>
+        <div class="float-chip chip-2"><span class="dot"></span> 0 threats found</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="press">
+    <span class="press-label">Featured in</span>
+    <div class="marquee">
+      <div class="marquee-track press-track">
+        <span class="plogo cnbc">CNBC</span><span class="plogo nyp">New York Post</span><span class="plogo ft">FINANCIAL TIMES</span><span class="plogo rd">Reader's Digest</span><span class="plogo zd">ZDNet</span><span class="plogo wired">WIRED</span>
+        <span class="plogo cnbc">CNBC</span><span class="plogo nyp">New York Post</span><span class="plogo ft">FINANCIAL TIMES</span><span class="plogo rd">Reader's Digest</span><span class="plogo zd">ZDNet</span><span class="plogo wired">WIRED</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <h2 class="reveal">Loved by thousands of iPhone<br>and Android users alike</h2>
+  <div class="marquee reviews-marquee">
+    <div class="marquee-track reviews-track">
+      <article class="review-card"><div class="stars">★★★★★</div><p>"Does exactly what it says. Clear to read and understand. This is now the second iPhone we've used it on and would certainly recommend this app."</p><b>colinandmandy94</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"Love the ease and efficiency. Awesome app. Very informative and insightful if wanting to know more about your device. Sweet tool. Highly recommend."</p><b>Jennifer Black</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"This app is good if you need to identify certain vulnerabilities on your iPhone. Customer service was quite helpful and responsive."</p><b>Phillip Colligan</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"I wish I had found this sooner. It flagged a tracking app that I never installed myself. Removal guide was super easy to follow."</p><b>Leslie R.</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"Checked my email against years of data breaches — found two I never knew about. The step-by-step fixes are brilliant."</p><b>Marcus T.</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"Does exactly what it says. Clear to read and understand. This is now the second iPhone we've used it on and would certainly recommend this app."</p><b>colinandmandy94</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"Love the ease and efficiency. Awesome app. Very informative and insightful if wanting to know more about your device. Sweet tool. Highly recommend."</p><b>Jennifer Black</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"This app is good if you need to identify certain vulnerabilities on your iPhone. Customer service was quite helpful and responsive."</p><b>Phillip Colligan</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"I wish I had found this sooner. It flagged a tracking app that I never installed myself. Removal guide was super easy to follow."</p><b>Leslie R.</b></article>
+      <article class="review-card"><div class="stars">★★★★★</div><p>"Checked my email against years of data breaches — found two I never knew about. The step-by-step fixes are brilliant."</p><b>Marcus T.</b></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="android">
+  <div class="about-inner">
+    <div class="about-copy reveal-left">
+      <h2>At Certo, mobile security is not an afterthought, <span class="hl">it's what we do.</span></h2>
+      <p>With years of experience in mobile security and spyware detection, our products have helped countless people safeguard their devices and find peace of mind.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="handleGetApp(this,'iPhone')">Get Certo for iPhone <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></button>
+        <button class="btn btn-outline" onclick="handleGetApp(this,'Android')">Get Certo for Android</button>
+      </div>
+    </div>
+    <div class="about-visual reveal-right">
+      <div class="about-photo">
+        <img src="jingalak.png" alt="Person protected by Certo mobile security">
+        <div class="art-tag tag-a">🔍 Spyware scan</div>
+        <div class="art-tag tag-b">✓ Device secure</div>
+        <div class="about-photo-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="help">
+  <h2 class="reveal">Get your freedom back,<br>stop mobile spyware today</h2>
+  <div class="features-card reveal">
+    <div class="features-grid">
+      <div class="feature">
+        <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+        <h3>Spyware detection</h3>
+        <p>Our advanced spyware detection engine can identify if a device contains spyware or bugging software.</p>
+      </div>
+      <div class="feature">
+        <div class="f-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="2"></rect><path d="M7 11h.01M11 11h.01M15 11h.01M7 14.5h10"></path></svg></div>
+        <h3>Keylogger detection</h3>
+        <p>Find malicious keyboards installed on your device that could allow someone to record things you type (e.g. passwords).</p>
+      </div>
+      <div class="feature">
+        <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6.5-5.4-6.5-10a6.5 6.5 0 0 1 13 0c0 4.6-6.5 10-6.5 10z"></path><circle cx="12" cy="11" r="2.3"></circle></svg></div>
+        <h3>Find tracking apps</h3>
+        <p>Check which apps can access your location, microphone or camera. Get alerted if a known tracking app is installed.</p>
+      </div>
+      <div class="feature">
+        <div class="f-icon"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"></rect><path d="M10 5h4"></path><path d="M9.5 15.5l1.8 1.8 3.4-3.6"></path></svg></div>
+        <h3>OS integrity check</h3>
+        <p>Analyze your operating system for signs of tampering that could compromise security, such as Jailbreaking.</p>
+      </div>
+      <div class="feature">
+        <div class="f-icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.6 8.3-8 9-4.4-.7-8-4-8-9V7z"></path><path d="M9.5 9.5l5 5M14.5 9.5l-5 5"></path></svg></div>
+        <h3>Threat removal</h3>
+        <p>Our intelligent scan will either safely remove threats for you or provide easy-to-follow instructions.</p>
+      </div>
+      <div class="feature">
+        <div class="f-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"></circle><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.3 1a7 7 0 0 0-2.1-1.3L14 3h-4l-.5 2.6a7 7 0 0 0-2.1 1.3l-2.3-1-2 3.4 2 1.5A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0-2.1-1.3l-2.3 1 2-3.4-2 1.5c.1-.4.1-.8.1-1.2z"></path></svg></div>
+        <h3>Easy to use</h3>
+        <p>We create easy to use apps that can check your device for vulnerabilities in a matter of minutes.</p>
+      </div>
+    </div>
+    <div class="features-cta">
+      <button class="btn btn-primary" onclick="handleGetApp(this,'iPhone')">Get Certo for iPhone <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></button>
+      <button class="btn btn-outline" onclick="handleGetApp(this,'Android')">Get Certo for Android</button>
+    </div>
+  </div>
+</section>
+
+<section class="duo" id="company">
+  <div class="duo-card duo-story reveal-left">
+    <h3>Read our story</h3>
+    <p>Find out why thousands trust Certo to secure their mobile world.</p>
+    <button class="btn btn-purple" onclick="handleAbout(this)">About us <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></button>
+  </div>
+  <div class="duo-card duo-help reveal-right">
+    <h3>Help Center</h3>
+    <p>Help topics, getting started guides and FAQs.</p>
+    <button class="btn btn-outline" onclick="handleHelp(this)">Visit help center</button>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <h2 class="reveal">Is someone spying on your phone?</h2>
+  <p class="reveal">Find out with Certo</p>
+  <div class="hero-cta reveal">
+    <button class="btn btn-primary" onclick="handleGetApp(this,'iPhone')">Get Certo for iPhone <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></button>
+    <button class="btn btn-ghost" onclick="handleGetApp(this,'Android')">Get Certo for Android</button>
+  </div>
+</section>
+
+<section class="insights">
+  <h2 class="reveal">Latest insights</h2>
+  <div class="insights-grid">
+    <article class="insight reveal">
+      <div class="insight-img"><img src="oq.png" alt="Signs your ex is spying on you"><span class="pill">Expertise</span></div>
+      <h3>Signs Your Ex Is Spying On You</h3>
+      <p>In an ideal world, after a relationship ends both you and your ex will move on. But what if they can't let go, and start spying on your...</p>
+    </article>
+    <article class="insight reveal">
+      <div class="insight-img"><img src="samsung.png" alt="Remove a hacker from your Samsung phone"><span class="pill">Guides</span></div>
+      <h3>How to Remove a Hacker from Your Samsung Phone</h3>
+      <p>Samsung is the second most popular manufacturer of smartphones in the world. Here's how to keep yours hacker-free...</p>
+    </article>
+    <article class="insight reveal">
+      <div class="insight-img"><img src="kamera.png" alt="Is your cell phone under surveillance"><span class="pill">Expertise</span></div>
+      <h3>Is Your Cell Phone Under Surveillance?</h3>
+      <p>In today's surveillance state, it can feel like your every move is being watched. Although your mind may be conjuring up images of CCTV...</p>
+    </article>
+  </div>
+  <button class="btn btn-primary reveal" onclick="handleInsights(this)">View all insights <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></button>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="f-col f-brand">
+      <h3>Scan. Detect. Remove.</h3>
+      <div class="socials">
+        <button class="soc" onclick="handleSocial(this,'Twitter')" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M4 4l7.2 9.3L4.4 20h2.3l5.5-5.5L16.8 20H20l-7.5-9.7L19.3 4h-2.3l-4.9 5L8.2 4z"></path></svg></button>
+        <button class="soc" onclick="handleSocial(this,'Facebook')" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8.5V6.8c0-.8.5-1.3 1.4-1.3H17V2.5h-2.6C11.8 2.5 10.5 4.3 10.5 6.5v2H8V12h2.5v9.5H14V12h2.7l.4-3.5z"></path></svg></button>
+        <button class="soc" onclick="handleSocial(this,'YouTube')" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12.5" rx="3"></rect><path d="M10.2 9.6l5 2.65-5 2.65z" fill="currentColor" stroke="none"></path></svg></button>
+      </div>
+      <div class="f-legal">
+        <a href="#" onclick="return false;">Privacy Policy</a>
+        <a href="#" onclick="return false;">Terms of Service</a>
+      </div>
+      <p class="copyright">Copyright © 2022 Certo Software Limited | Registered in England & Wales No. 10072356</p>
+    </div>
+    <div class="f-col f-nav">
+      <h4>Certo</h4>
+      <a href="#iphone">— iPhone</a>
+      <a href="#android">— Android</a>
+      <a href="#help">— Help</a>
+      <a href="#company">— About</a>
+      <a href="contact.html">— Contact</a>
+    </div>
+    <div class="f-col f-news">
+      <div class="news-card">
+        <h4>Sign up to our newsletter</h4>
+        <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
+        <div class="news-form">
+          <input type="email" id="newsEmail" placeholder="Email address">
+          <button class="btn btn-news" onclick="handleSubscribe(this)">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="trademarks">Apple, the Apple logo, and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC.</p>
+</footer>
+
+<button class="to-top" onclick="handleToTop(this)" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+</button>
+
+<!-- toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
